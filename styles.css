@@ -1,0 +1,48 @@
+body {
+    margin: 50px;
+}
+
+div {
+    position: absolute;
+    transition: all 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.sz-card, .en-card {
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    line-height: 7;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.sz-card {
+    z-index: 3;
+    color: #000;
+    background: #ccc;
+}
+
+.sz-card:active {
+    cursor: pointer;
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.sz-card:active + .en-card {
+    transform: rotateY(0deg);
+}
+
+.en-card {
+    color: #fff;
+    text-align: center;
+    transform: rotateY(180deg);
+    background: rgb(49, 24, 150);
+}
+
+.info-text {
+    font-size: 13.7px;
+    line-height: 1.5;
+    margin-top: -45px;
+    padding: 5px;
+}

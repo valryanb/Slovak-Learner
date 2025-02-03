@@ -1,0 +1,32 @@
+<!-- using https://github.com/SMenigat/thousand-most-common-words/ and fetch API to randomize flashcards to learn Slovak with
+
+clicking will rotate them 
+to reveal the english translation
+
+to do: functionality for multiple cards
+button to add/increase number of cards present
+harder word cards will have holo effects to signify their difficulty
+
+stretch goal: use click and drag to form words into sentences -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Slovak Learner</title>
+</head>
+<body>
+    <div class="sz-card">
+       <span id="sz-word"></span>
+       <p class="info-text">Click and hold to reveal English translation.</p>
+    </div>
+       <div class="en-card">
+    <span id="en-word"></span>
+    
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
