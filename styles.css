@@ -1,3 +1,8 @@
+:root {
+    --galaxy: url(/galaxy.jpg);
+    --glitter: url(/glitter.png);
+}
+
 body {
     margin: 50px;
 }
@@ -20,7 +25,14 @@ div {
 .sz-card {
     z-index: 3;
     color: #000;
-    background: #ccc;
+    text-shadow:
+    3px 3px 10px #fff,
+  -1px -1px 0 #fff,  
+   1px -1px 0 #fff,
+   -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    font-weight: 600;
+    background: #A6BCE5;
 }
 
 .sz-card:active {
@@ -34,15 +46,69 @@ div {
 }
 
 .en-card {
-    color: #fff;
+    color: #000;
     text-align: center;
     transform: rotateY(180deg);
-    background: rgb(49, 24, 150);
+    background: #a4c4ff;
 }
 
 .info-text {
     font-size: 13.7px;
     line-height: 1.5;
-    margin-top: -45px;
     padding: 5px;
+    margin-top: -45px;
 }
+
+#two {
+    margin-top: 200px;
+}
+
+#three {
+    margin-left: 300px;
+}
+
+#four {
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+.rare-shine {
+    background-blend-mode: soft-light, color-burn, color;
+        mask-image:
+        radial-gradient( 
+            farthest-corner circle at calc(var(--y, 0) * 1px - 50px) calc(var(--x, 0) * 1px - 50px), 
+            hsla(50, 20%, 90%, 0.95) 10%, 
+            rgba(181, 139, 164, 0.5) 50%, 
+            hsl(0, 0%, 100%) 60% );
+        mask-size: cover;
+        mask-position: center;
+        mask-repeat: no-repeat;
+}
+
+.rare {
+    background-blend-mode:soft-light, color-burn;
+    filter: brightness(1) contrast(1.3) saturate(.9);
+    background-position: 40% 45%, 55% 55%, center center;
+    background-image: var(--galaxy);
+    }
+
+    .rare:hover {
+        content: '';
+        filter: brightness(1) contrast(2);
+        mix-blend-mode: overlay;
+        background-image: var(--galaxy);
+        background-blend-mode: soft-light, color-burn, color;
+        mask-image:
+        radial-gradient( 
+            farthest-corner circle at calc(var(--y, 0) * 1px - 50px) calc(var(--x, 0) * 1px - 50px), 
+            hsla(50, 20%, 90%, 0.95) 10%, 
+            rgba(181, 139, 164, 0.5) 50%, 
+            hsl(0, 0%, 100%) 60% );
+        mask-size: cover;
+        mask-position: center;
+        mask-repeat: no-repeat;
+    }
+
+    .en-card .rare {
+        background-color: red;
+    }
